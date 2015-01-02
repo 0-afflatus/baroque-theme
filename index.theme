@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Baroque
+Type=X-GNOME-Metatheme
+Encoding=UTF-8
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=Baroque
+MetacityTheme=Baroque
+IconTheme=Baroque
+CursorTheme=DMZ-Black
+CursorSize=24

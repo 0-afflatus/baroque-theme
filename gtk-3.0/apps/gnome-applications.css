@@ -1,0 +1,204 @@
+/**********************
+ * Failback Mode Panel
+ **********************/
+
+PanelWidget,
+PanelApplet,
+PanelToplevel {
+	padding: 0px;
+}
+
+.gnome-panel-menu-bar,
+PanelApplet > GtkMenuBar.menubar,
+PanelApplet > GtkMenuBar.menubar.menuitem,
+PanelMenuBar.menubar,
+PanelMenuBar.menubar.menuitem {
+	-PanelMenuBar-icon-visible: true;
+
+	padding: 0px 1px;
+	border-style: outset;
+	border-width: 1px;
+	border-color: @fg_color;
+	border-radius: 6px;
+	icon-shadow: -1 -1 alpha (shade (@bg_color, 0.2), 0.5);
+	color: @theme_fg_color;
+}
+
+Dock * {
+
+}
+
+ClockBox,
+.gnome-panel-menu-bar {
+	font: bold;
+	text-shadow: 0 -1 shade (@dark_bg_color, 0.6);
+}
+
+PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
+.gnome-panel-menu-bar.menuitem:prelight {
+	color: @selected_fg_color;
+	border-color: @selected_bg_color;
+}
+
+PanelApplet {
+	border-width: 1px;
+}
+
+PanelSeparator {
+	border-width: 0px;
+}
+
+PanelAppletFrame { 
+	border-width: 1px;
+}
+
+/* panel buttons (clock, tasklist etc) */
+
+PanelApplet GtkToggleButton {
+	border: solid;
+	border-color: @fg_color;
+	border-width: 1px;
+	color: @fg_color;
+}
+
+PanelApplet GtkToggleButton:prelight:active,
+PanelApplet GtkToggleButton:active {
+	border: solid;
+	border-color: @selected_bg_color;
+	border-width: 1px;
+	color: @selected_fg_color;
+}
+
+PanelApplet GtkToggleButton:prelight {
+	border: solid;
+	border-color: @fg_color;
+	border-width: 1px;
+	color: @selected_fg_color;
+}
+
+NaTrayApplet {
+	-NaTrayApplet-icon-padding: 12px;
+	-NaTrayApplet-icon-size: 16px;
+}
+
+WnckPager, WnckTasklist {
+	background-color: @base_color;
+	color: @fg_color;
+	border: inset;
+	border-color: @fg_color;
+	border-width: 1px;
+	margin: 1px;
+	padding: 2px;
+}
+
+WnckPager:selected, WnckTasklist:selected {
+	background-color: @selected_bg_color;
+}
+
+/************
+ * nautilus *
+ ************/
+
+.nautilus-canvas-item {
+    border-radius: 2px;
+}
+
+/* desktop mode */
+
+.nautilus-desktop.nautilus-canvas-item {
+    color: @theme_text_color;
+    text-shadow: 1 1 #000000;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active {
+    background-image: none;
+    background-color: alpha (@theme_bg_color, 0.8);
+
+    color: @theme_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+    background-image: none;
+    background-color: alpha (@theme_selected_bg_color, 0.8);
+
+    color: @theme_selected_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+    text-shadow: none;
+}
+
+/* browser window */
+
+NautilusTrashBar.info,
+NautilusXContentBar.info,
+NautilusSearchBar.info,
+NautilusQueryEditor.info {
+    background-color: alpha (@info_bg_color, 0.7);
+    border-style: solid;
+    border-width: 1px;
+
+    color: @info_fg_color;
+    border-color: shade (@info_fg_color, 0.5);
+	margin: 3px;
+	box-shadow: 1 1 2 @shade_bg_color;
+}
+
+.nautilus-cluebar-label {
+	background-color: #303;
+	font: bold;
+	color: @info_fg_color;
+}
+
+NautilusLocationEntry.entry {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+NautilusQueryEditor .button,
+NautilusQueryEditor .button:focus,
+NautilusQueryEditor .button:active,
+NautilusQueryEditor .button:active:focus,
+NautilusSearchBar .entry,
+NautilusSearchBar .entry:focus {
+    border-color: darker (@info_bg_color);
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/* inactive pane */
+
+.nautilus-inactive-pane .view,
+.nautilus-inactive-pane .notebook {
+background-color: shade (@theme_base_color, 0.9);
+}
+
+/******************
+ * gnome terminal *
+ ******************/
+/*
+TerminalScreen {
+    background-color: shade (@theme_base_color, 0.95);
+    color: @theme_text_color;
+
+    -TerminalScreen-background-darkness: 0.9;
+}
+
+TerminalWindow GtkNotebook.notebook {
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+}
+*/
+/***********************
+ * gnome control center *
+ ***********************/
+
+CcShellItemView.view {
+    background-color: @theme_bg_color;
+}
+

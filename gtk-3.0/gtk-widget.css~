@@ -1,0 +1,12 @@
+* {
+	engine: none;
+}
+
+GtkWindow {
+color: @theme_fg_color;
+}
+
+.background {
+	background-color: @bg_color;
+	background-image: url("img/bg.png");
+}

@@ -1,0 +1,37 @@
+Baroque-GTK2-1.0
+
+* Inital release
+* Tweaked background colours to improve the look of Mozilla apps
+* Removed the explanation of how to change Nautilus' icon title color from the README as I think it's probably unnecessary now.
+
+Baroque-GTK2-0.9
+
+* Matching metacity theme modded from DarkX theme
+* Gtk colour set altered and various widgets recoloured to fit
+* Buttons and handles remodelled
+* Radio buttons and check marks from original pixmap theme
+* Background changed to Lemog texture
+
+tim hall <tim@64studio.com>
+
+Aero-GTK-2.x 1.2
+
+* gtk-stop icon has been changed
+* GtkDialog and GtkMenubar don't have the highlight on top
+  anymore, because this is painted by the Metacity theme now.
+
+Aero-GTK-2.x 1.1
+
+* Wire frame borders are anti-aliased now.
+* The active notebook tab is distincter now.
+* 61 stock icons have been themed (11 of them in two sizes).
+* The background image of windows and dialogs has been changed.
+* The font color has been brightened somewhat for better contrast.
+* An explanation of how to change Nautilus' icon title color to
+  something readable, has been added to the README.
+
+Aero-GTK-2.x 1.0
+
+* Initial release.
+
+Marcus Petzoldt <m.petzoldt@gmx.de>

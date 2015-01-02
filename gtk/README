@@ -1,0 +1,19 @@
+Baroque is a Gtk theme, based on Marcus Petzoldt's Aero theme. It provides a dark wooden background with gold, ruby and amethyst fittings. It is intended as a modern re-invention of the original Pixmap theme.
+
+It is a dark theme, which provides unusual challenges. While I am interested in reports of widgets not displaying properly or unreadable text in specific circumstances, if you find this theme really hurts your eyes, it's probably best to go back to a lighter theme. This gtk-1.2 theme is really just for backwards compatibility, I'm probably not going to bother maintaining it unless someone hassles me.
+
+The most recent version of Baroque can be found at themes.freshmeat.net.
+
+
+INSTALLATION
+------------
+
+The simplest way to do this is simply drag and drop the tarball on to the Theme Preferences dialogue (Menu: Desktop->Preferences->Theme). You can also unpack the tarball into your ~/.themes directory and use gconf-editor to switch
+theme. 
+
+
+AUTHOR(s)
+---------
+
+Baroque: tim hall <tim@64studio.com>
+Aero:	Marcus Petzoldt <m.petzoldt@gmx.de>

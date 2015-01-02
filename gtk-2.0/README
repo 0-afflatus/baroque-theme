@@ -1,0 +1,53 @@
+Baroque is a Gtk2 theme, based on Marcus Petzoldt's Aero theme. It provides a dark wooden background with gold, ruby and amethyst fittings. It is intended as a modern re-invention of the original Pixmap theme.
+
+Background texture from Lemog: http://lemog.fr/lemog_v6/ scaled to 256x256.
+
+It is a dark theme, which provides unusual challenges. While I am interested in reports of widgets not displaying properly or unreadable text in specific circumstances, if you find this theme really hurts your eyes, it's probably best to go back to a lighter theme. I am working on an original icon theme to go with it, this may take some time.
+
+The most recent version of Baroque can be found at themes.freshmeat.net.
+
+FIREFOX
+-------
+
+The simplest workaround for known problems in Firefox is to edit ~/.mozilla/firefox/xxxxxxxx.default/chrome/userContent.css to include:
+
+input {
+	background: #252325 ! important;
+	color: #dddddd ! important
+}
+
+select {
+        background: #252325 ! important;
+        color: #dddddd ! important
+}
+
+textarea {
+        background: #252325 ! important;
+        color: #dddddd ! important
+}
+
+input[type='submit'] {
+        background: #4b2033 ! important;
+        color: #ffdd99 ! important
+}
+
+input[type='submit']:hover {
+        background: #5e2649 ! important;
+        color: #ffeecc ! important
+}
+
+Or something similar. This will make form content readable. You may need to create this file from scratch.
+
+
+INSTALLATION
+------------
+
+The simplest way to do this is simply drag and drop the tarball on to the Theme Preferences dialogue (Menu: Desktop->Preferences->Theme). You can also unpack the tarball into your ~/.themes directory and use gconf-editor to switch
+theme. 
+
+
+AUTHOR(s)
+---------
+
+Baroque: tim hall <tim@64studio.com>
+Aero:	Marcus Petzoldt <m.petzoldt@gmx.de>

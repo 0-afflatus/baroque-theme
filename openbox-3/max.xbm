@@ -1,0 +1,4 @@
+#define agnula-max_width 8
+#define agnula-max_height 8
+static unsigned char agnula-max_bits[] = {
+   0x24, 0x24, 0xff, 0x24, 0x24, 0xff, 0x24, 0x24};

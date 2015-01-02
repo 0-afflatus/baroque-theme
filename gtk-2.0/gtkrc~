@@ -1,0 +1,1171 @@
+# Baroque
+# 
+# Depends on GTK+ 2.x and pixmap engine
+#
+# Copyright (c) July 17, 2007 tim hall <tim@64studio.com>
+#
+# Largely based on Aero, which is:
+# Copyright (c) July 16, 2003 Marcus Petzoldt <m.petzoldt@gmx.de>
+#
+# The Baroque theme is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Library General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# The Baroque theme is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# Library General Public License for more details.
+#
+# You should have received a copy of the GNU Library General Public
+# License along with the Baroque theme; see the file LICENSE.  If
+# not, write to the Free Software Foundation, Inc., 59 Temple Place -
+# Suite 330, Boston, MA 02111-1307, USA.
+
+                   
+style "Baroque-default"
+{
+  GtkWidget::interior_focus         = 1
+  GtkWidget::focus_padding          = 1
+  GtkWidget::cursor_color           = "#ffffff"
+  GtkWidget::secondary_cursor_color = "#ffdd99"
+  GtkWidget::focus_line_pattern     = "\3\1"
+  GtkButton::default_border         = { 0, 0, 0, 0 }
+  GtkButton::default_outside_border = { 0, 0, 0, 0 }
+  GtkRange::trough_border           = 2
+  GtkRange::slider_width            = 11
+  GtkRange::stepper_size            = 12
+  GtkPaned::handle_size             = 7
+  GtkScrollbar::min_slider_length   = 30
+  GtkCheckButton::indicator_size    = 12
+  GtkMenuBar::internal_padding      = 2
+  GtkOptionMenu::indicator_size     = { 12, 8 }
+  GtkOptionMenu::indicator_spacing  = { 0, 4, 0, 0 }
+
+  xthickness            = 2
+  ythickness            = 2
+
+  fg[NORMAL]        = "#ffdd99"
+  fg[PRELIGHT]      = "#ffeecc"
+  fg[ACTIVE]        = "#ffffff"
+  fg[SELECTED]      = "#ffffff"
+  fg[INSENSITIVE]   = "#332300"
+  
+  bg[NORMAL]        = "#3b1723"
+  bg[PRELIGHT]      = "#442355"
+  bg[ACTIVE]        = "#331344"
+  bg[SELECTED]      = "#440000"
+  bg[INSENSITIVE]   = "#3b1723"
+
+  text[NORMAL]      = "#ddccaa"
+  text[PRELIGHT]    = "#ffeecc"
+  text[ACTIVE]      = "#ffffff"
+  text[SELECTED]    = "#ffeecc"
+  text[INSENSITIVE] = "#000000"
+
+  base[NORMAL]      = "#232323"
+  base[PRELIGHT]    = "#554422"
+  base[ACTIVE]      = "#553366"
+  base[SELECTED]    = "#660000"
+  base[INSENSITIVE] = "#333333"
+
+  bg_pixmap[NORMAL] = "bg.png"
+
+  engine "pixmap"
+  {
+
+    image
+    {
+      function          = BOX
+    }
+
+    # handle
+    
+    image
+    {
+      function          = HANDLE
+      state             = PRELIGHT
+      recolorable       = TRUE
+      overlay_file      = "vhandle-pre.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      orientation       = VERTICAL
+    }
+    image
+    {
+      function          = HANDLE
+      recolorable       = TRUE
+      overlay_file      = "vhandle.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      orientation       = VERTICAL
+    }
+    image
+    {
+      function          = HANDLE
+      state             = PRELIGHT
+      recolorable       = TRUE
+      overlay_file      = "hhandle-pre.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      orientation       = HORIZONTAL
+    }
+    image
+    {
+      function          = HANDLE
+      recolorable       = TRUE
+      overlay_file      = "hhandle.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      orientation       = HORIZONTAL
+    }
+
+    # shadow
+
+     image
+     {
+       function         = SHADOW
+       recolorable      = FALSE
+       file             = "shadow.png"
+       border           = { 5, 5, 5, 5 }
+       stretch          = TRUE
+     }
+     image
+     {
+       function         = SHADOW_GAP
+       recolorable      = TRUE
+       file             = "shadow-gap.png"
+       border           = { 1, 1, 1, 1 }
+       stretch          = TRUE
+       gap_start_file   = "shadow-gap-top.png"
+       gap_start_border = { 0, 0, 1, 0 }
+       gap_end_file     = "shadow-gap-top.png"
+       gap_end_border   = { 0, 0, 1, 0 }
+       gap_side         = TOP
+     }
+    image
+    {
+       function         = VLINE
+       recolorable      = TRUE
+       file             = "line-v.png"
+       border           = { 0, 0, 0, 0 }
+       stretch          = TRUE
+    }
+    image
+    {
+      function          = HLINE
+      recolorable       = TRUE
+      file              = "line-h.png"
+      border            = { 0, 0, 0, 0 }
+      stretch           = TRUE
+    }
+
+    # arrows
+
+    image
+    {
+      function          = ARROW
+      state             = INSENSITIVE
+      recolorable       = TRUE
+      overlay_file      = "arrow-up-i.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      arrow_direction   = UP
+    }
+    image
+    {
+      function          = ARROW
+      recolorable       = TRUE
+      overlay_file      = "arrow-up.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      arrow_direction   = UP
+    }
+    image
+    {
+      function          = ARROW
+      state             = INSENSITIVE
+      recolorable       = TRUE
+      overlay_file      = "arrow-down-i.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      arrow_direction   = DOWN
+    }
+    image
+    {
+      function          = ARROW
+      recolorable       = TRUE
+      overlay_file      = "arrow-down.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      arrow_direction   = DOWN
+    }
+    image
+    {
+      function          = ARROW
+      state             = INSENSITIVE
+      recolorable       = TRUE
+      overlay_file      = "arrow-left-i.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      arrow_direction   = LEFT
+    }
+    image
+    {
+      function          = ARROW
+      recolorable       = TRUE
+      overlay_file      = "arrow-left.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      arrow_direction   = LEFT
+    }
+    image
+    {
+      function          = ARROW
+      state             = INSENSITIVE
+      recolorable       = TRUE
+      overlay_file      = "arrow-right-i.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      arrow_direction   = RIGHT
+    }
+    image
+    {
+      function          = ARROW
+      recolorable       = TRUE
+      overlay_file      = "arrow-right.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      arrow_direction   = RIGHT
+    }
+    image
+    {
+      function          = CHECK
+      shadow            = OUT
+      recolorable       = TRUE
+      overlay_file      = "check-n.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+    }
+    image
+    {
+      function          = CHECK
+      shadow            = IN
+      recolorable       = TRUE
+      overlay_file      = "check-s.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+    }
+    image
+    {
+      function          = OPTION
+      shadow            = OUT
+      recolorable       = TRUE
+      overlay_file      = "radio-n.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+    }
+    image
+    {
+      function          = OPTION
+      shadow            = IN
+      recolorable       = TRUE
+      overlay_file      = "radio-s.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+    }
+  }
+}
+
+style "Baroque-statusbar"
+{
+  fg[NORMAL]        = "#dddddd"
+  fg[PRELIGHT]      = "#ffeecc"
+  fg[ACTIVE]        = "#ffeecc"
+  fg[SELECTED]      = "#ffffff"
+  fg[INSENSITIVE]   = "#330000"
+  
+  bg[NORMAL]        = "#503023"
+  bg[PRELIGHT]      = "#666666"
+  bg[ACTIVE]        = "#666666"
+  bg[SELECTED]      = "#663333"
+  bg[INSENSITIVE]   = "#333333"
+
+  text[NORMAL]      = "#d8d8d8"
+  text[PRELIGHT]    = "#d8d8d8"
+  text[ACTIVE]      = "#ffffff"
+  text[SELECTED]    = "#ffeecc"
+  text[INSENSITIVE] = "#000000"
+
+  base[NORMAL]      = "#232323"
+  base[PRELIGHT]    = "#443744"
+  base[ACTIVE]      = "#443744"
+  base[SELECTED]    = "#440000"
+  base[INSENSITIVE] = "#231323"
+
+  bg_pixmap[NORMAL] = "bg.png"
+}
+
+style "Baroque-button" = "Baroque-default"
+{
+  # golden focus rectangle
+  fg[NORMAL] = "#ffbb33"
+  fg[INSENSITIVE] = "#000000"
+  fg[ACTIVE] = "#ffbb33"
+  fg[SELECTED] = "#ffbb33"
+  fg[PRELIGHT] = "#ffbb33"
+
+  engine "pixmap"
+  {
+		image
+		{
+			function				 = BOX
+			detail					 = "buttondefault"
+      file             = "button-default.png"
+      border           = { 8, 8, 8, 8 }
+      stretch          = TRUE
+		}
+    image
+    {
+      function         = BOX
+      shadow           = IN
+      state            = PRELIGHT
+      recolorable      = TRUE
+      file             = "button-in-pre.png"
+      border           = { 9, 9, 9, 9 }
+      stretch          = TRUE
+    }
+    image
+    {
+      function         = BOX
+      shadow           = IN
+      recolorable      = TRUE
+      file             = "button-in.png"
+      border           = { 8, 8, 8, 8 }
+      stretch          = TRUE
+    }
+    image
+    {
+      function         = BOX
+      state            = PRELIGHT
+      recolorable      = TRUE
+      file             = "button-out-pre.png"
+      border           = { 9, 9, 9, 9 }
+      stretch          = TRUE
+    }
+    image
+    {
+      function         = BOX
+      recolorable      = TRUE
+      file             = "button-out.png"
+      border           = { 8, 8, 8, 8 }
+      stretch          = TRUE
+    }
+  }
+}
+
+style "Baroque-optionmenu" = "Baroque-default"
+{
+  # golden focus rectangle
+  fg[NORMAL] = "#ffbb33"
+  fg[INSENSITIVE] = "#000000"
+  fg[ACTIVE] = "#ffbb33"
+  fg[SELECTED] = "#ffbb33"
+  fg[PRELIGHT] = "#ffbb33"
+
+  engine "pixmap"
+  {
+    image
+    {
+      function         = BOX
+      shadow           = IN
+      state            = PRELIGHT
+			recolorable      = TRUE
+      file             = "button-in-pre.png"
+      border           = { 9, 9, 9, 9 }
+      stretch          = TRUE
+    }
+    image
+    {
+      function         = BOX
+      shadow           = IN
+			recolorable      = TRUE
+      file             = "button-in.png"
+      border           = { 8, 8, 8, 8 }
+      stretch          = TRUE
+    }
+    image
+    {
+      function         = BOX
+      shadow           = OUT
+      state            = PRELIGHT
+			recolorable      = TRUE
+      file             = "button-out-pre.png"
+      border           = { 9, 9, 9, 9 }
+      stretch          = TRUE
+    }
+    image
+    {
+      function         = BOX
+      shadow           = OUT
+			recolorable      = TRUE
+      file             = "button-out.png"
+      border           = { 8, 8, 8, 8 }
+      stretch          = TRUE
+    }
+    image
+    {
+      function           = TAB
+      state              = INSENSITIVE
+      recolorable        = TRUE
+      overlay_file       = "arrow-down-i.png"
+      overlay_border     = { 0, 0, 0, 0 }
+      overlay_stretch    = FALSE
+    }
+    image
+    {
+      function           = TAB
+      recolorable        = TRUE
+      overlay_file       = "arrow-down.png"
+      overlay_border     = { 0, 0, 0, 0 }
+      overlay_stretch    = FALSE
+    }
+  }
+}
+
+style "Baroque-radiobutton"               = "Baroque-default"
+{
+  # golden focus rectangle
+  fg[NORMAL] = "#ffbb33"
+  fg[INSENSITIVE] = "#000000"
+  fg[ACTIVE] = "#ffbb33"
+  fg[SELECTED] = "#ffbb33"
+  fg[PRELIGHT] = "#ffbb33"
+}
+
+style "Baroque-checkbutton"               = "Baroque-default"
+{
+  # golden focus rectangle
+  fg[NORMAL] = "#ffbb33"
+  fg[INSENSITIVE] = "#000000"
+  fg[ACTIVE] = "#ffbb33"
+  fg[SELECTED] = "#ffbb33"
+  fg[PRELIGHT] = "#ffbb33"
+
+  engine "pixmap"
+  {
+    image
+    {
+      function          = FLAT_BOX
+    }
+  }
+}
+
+style "Baroque-entry"     = "Baroque-default"
+{
+  GtkWidget::interior_focus         = 1
+
+  bg_pixmap[NORMAL] = "entry-normal.png"
+  bg_pixmap[INSENSITIVE] = "entry-insensitive.png"
+}
+
+style "Baroque-spinbutton"= "Baroque-entry"
+{
+  bg[NORMAL] = "#110000"
+  engine "pixmap"
+  {
+    image
+    {
+      function          = BOX
+      recolorable       = TRUE
+      detail            = "spinbutton"
+      file              = "shadow.png"
+      border            = { 5, 5, 5, 5 }
+      stretch           = TRUE
+    }
+    image
+    {
+      function          = BOX
+      detail            = "spinbutton_up"
+      file              = "spinbutton-up.png"
+      border            = { 4, 5, 5, 0 }
+      stretch           = TRUE
+    }
+    image
+    {
+      function          = BOX
+      detail            = "spinbutton_down"
+      file              = "spinbutton-down.png"
+      border            = { 4, 5, 0, 5 }
+      stretch           = TRUE
+    }
+  }
+}
+
+style "Baroque-scrollbar"
+{
+  bg[ACTIVE]  = "#191715"
+  engine "pixmap" 
+  {
+    image 
+    {
+      function          = BOX
+      detail            = "trough"
+      file              = "trough_bg.png"
+      stretch           = TRUE
+      overlay_file      = "trough.png"
+      overlay_border    = { 5, 5, 5, 5 }
+      overlay_stretch   = TRUE
+    }
+    image 
+    {
+      function          = SLIDER
+      state             = PRELIGHT
+      recolorable       = TRUE
+      file              = "slider-v-pre.png"
+      border            = { 4, 4, 7, 5 }
+      stretch           = TRUE
+      orientation       = VERTICAL
+      overlay_file      = "vhandle-pre.png"
+      overlay_border    = { 5, 5, 5, 5 }
+      overlay_stretch   = FALSE
+    }
+    image 
+    {
+      function          = SLIDER
+      state             = PRELIGHT
+      recolorable       = TRUE
+      file              = "slider-h-pre.png"
+      border            = { 5, 5, 6, 4 }
+      stretch           = TRUE
+      orientation       = HORIZONTAL
+      overlay_file      = "hhandle-pre.png"
+      overlay_border    = { 5, 5, 5, 5 }
+      overlay_stretch   = FALSE
+    }
+    image 
+    {
+      function          = SLIDER
+      recolorable       = TRUE
+      file              = "slider.png"
+      border            = { 4, 4, 6, 4 }
+      stretch           = TRUE
+      orientation       = VERTICAL
+      overlay_file      = "vhandle.png"
+      overlay_border    = { 5, 5, 5, 5 }
+      overlay_stretch   = FALSE
+    }
+    image 
+    {
+      function          = SLIDER
+      recolorable       = TRUE
+      file              = "slider.png"
+      border            = { 4, 4, 6, 4 }
+      stretch           = TRUE
+      orientation       = VERTICAL
+      overlay_file      = "hhandle.png"
+      overlay_border    = { 5, 5, 5, 5 }
+      overlay_stretch   = FALSE
+    }
+  }
+}
+
+style "Baroque-progressbar"               = "Baroque-default"
+{
+  fg[NORMAL] = "#992399"
+  bg[NORMAL] = "#110000"
+  engine "pixmap" 
+  {
+    image
+    {
+      function          = BOX
+      detail            = "bar"
+      recolorable       = TRUE
+      file              = "progressbar.png"
+      border            = { 0, 21, 0, 15 }
+      stretch           = TRUE
+    }
+    image
+    {
+      function          = BOX
+      recolorable       = TRUE
+      file              = "bg.png"
+      stretch           = FALSE
+      overlay_file      = "progress-trough.png"
+      overlay_border    = { 6, 6, 0, 15 }
+      overlay_stretch   = TRUE
+    }
+  }
+}
+
+style "Baroque-range"     = "Baroque-standard"
+{
+  # golden focus rectangle
+  fg[NORMAL] = "#ffbb33"
+  fg[INSENSITIVE] = "#000000"
+  fg[ACTIVE] = "#ffbb33"
+  fg[SELECTED] = "#ffbb33"
+  fg[PRELIGHT] = "#ffbb33"
+  bg[NORMAL] = "#110000"
+
+  engine "pixmap" 
+  {
+    image 
+    {
+      function          = BOX
+      recolorable       = TRUE
+      detail            = "trough"
+      file              = "trough_bg.png"
+      stretch           = TRUE
+      overlay_file      = "trough.png"
+      overlay_border    = { 5, 5, 5, 5 }
+      overlay_stretch   = TRUE
+    }
+    image 
+    {
+      function          = SLIDER
+      state             = PRELIGHT
+      recolorable       = TRUE
+      file              = "slider-h-pre.png"
+      border            = { 5, 5, 6, 4 }
+      stretch           = TRUE
+      overlay_file      = "hhandle-pre.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      orientation       = HORIZONTAL
+    }
+    image 
+    {
+      function          = SLIDER
+      state             = PRELIGHT
+      recolorable       = TRUE
+      file              = "slider-v-pre.png"
+      border            = { 4, 4, 7, 5 }
+      stretch           = TRUE
+      overlay_file      = "vhandle-pre.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      orientation       = VERTICAL
+    }
+    image 
+    {
+      function          = SLIDER
+      recolorable       = TRUE
+      file              = "slider.png"
+      border            = { 4, 4, 6, 4 }
+      stretch           = TRUE
+      overlay_file      = "hhandle.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      orientation       = HORIZONTAL
+    }
+    image 
+    {
+      function          = SLIDER
+      recolorable       = TRUE
+      file              = "slider.png"
+      border            = { 4, 4, 6, 4 }
+      stretch           = TRUE
+      overlay_file      = "vhandle.png"
+      overlay_border    = { 0, 0, 0, 0 }
+      overlay_stretch   = FALSE
+      orientation       = VERTICAL
+    }
+  }
+}
+
+style "Baroque-menu"      = "Baroque-default"
+{
+  bg_pixmap[NORMAL] = "bg.png"
+
+  engine "pixmap"
+  {
+    image
+    {
+      function          = BOX
+      detail            = "menu"
+      recolorable       = TRUE
+      file              = "shadow-menu.png"
+      border            = { 1, 1, 1, 1 }
+      stretch           = TRUE
+    }
+  }
+}
+
+style "Baroque-menuitem"  = "Baroque-default"
+{
+  # golden focus rectangle
+  fg[NORMAL] = "#ffbb33"
+  fg[INSENSITIVE] = "#000000"
+  fg[ACTIVE] = "#ffbb33"
+  fg[SELECTED] = "#ffbb33"
+  fg[PRELIGHT] = "#ffbb33"
+
+  xthickness            = 4
+
+  engine "pixmap"
+  {
+    image
+    {
+      function          = BOX
+      recolorable       = TRUE
+      file              = "box.png"
+      border            = { 1, 1, 8, 8 }
+      stretch           = TRUE
+    }
+  }
+}
+
+#  = "Baroque-default"
+style "Baroque-notebook"
+{
+  # golden focus rectangle
+    fg[NORMAL] 		= "#ffbb33"
+    bg[NORMAL]        	= "#3b1723"
+    bg[PRELIGHT]      	= "#666666"
+    bg[ACTIVE]        	= "#332222"
+    bg[SELECTED]      	= "#663333"
+    bg[INSENSITIVE]   	= "#222222"
+
+  engine "pixmap" 
+  {
+    image 
+    {
+      function          = EXTENSION
+      state             = ACTIVE
+      recolorable       = TRUE
+      file              = "ext-bottom-inactive.png"
+      border            = { 8, 8, 9, 1 }
+      stretch           = TRUE
+      gap_side          = BOTTOM
+    }
+    image 
+    {
+      function          = EXTENSION
+      recolorable       = TRUE
+      file              = "ext-bottom-active.png"
+      border            = { 7, 7, 8, 1 }
+      stretch           = TRUE
+      gap_side          = BOTTOM
+    }
+    image 
+    {
+      function          = EXTENSION
+      state             = ACTIVE
+      recolorable       = TRUE
+      file              = "ext-top-inactive.png"
+      border            = { 8, 8, 1, 9 }
+      stretch           = TRUE
+      gap_side          = TOP
+    }
+    image 
+    {
+      function          = EXTENSION
+      recolorable       = TRUE
+      file              = "ext-top-active.png"
+      border            = { 7, 7, 1, 8 }
+      stretch           = TRUE
+      gap_side          = TOP
+    }
+    image 
+    {
+      function          = EXTENSION
+      recolorable       = TRUE
+      file              = "ext-right-active.png"
+      border            = { 7, 4, 8, 8 }
+      stretch           = TRUE
+      gap_side          = RIGHT
+    }
+    image 
+    {
+      function          = EXTENSION
+      recolorable       = TRUE
+      file              = "ext-left-active.png"
+      border            = { 4, 7, 8, 8 }
+      stretch           = TRUE
+      gap_side          = LEFT
+    }
+    image 
+    {
+      function          = BOX_GAP
+      recolorable       = TRUE
+      file              = "shadow-notebook-top.png"
+      border            = { 5, 5, 0, 5 }
+      stretch           = TRUE
+      gap_file          = "trans.png"
+      gap_border        = { 0, 0, 0, 0 }
+      gap_start_file    = "light.png"
+      gap_start_border  = { 0, 0, 0, 0 }
+      gap_end_file      = "light.png"
+      gap_end_border    = { 0, 0, 0, 0 }
+	    gap_side          = TOP
+    }
+    image
+    {
+      function          = BOX_GAP
+      recolorable       = TRUE
+      file              = "shadow-notebook-bottom.png"
+      border            = { 5, 5, 5, 0 }
+      stretch           = TRUE
+      gap_file          = "trans.png"
+      gap_border        = { 0, 0, 0, 0 }
+      gap_start_file    = "light.png"
+      gap_start_border  = { 0, 0, 0, 0 }
+      gap_end_file      = "light.png"
+      gap_end_border    = { 0, 0, 0, 0 }
+	    gap_side          = BOTTOM
+    }
+    image 
+    {
+      function          = BOX_GAP
+      recolorable       = TRUE
+      file              = "shadow-notebook-left.png"
+      border            = { 5, 5, 5, 5 }
+      stretch           = TRUE
+      gap_file          = "trans.png"
+      gap_border        = { 0, 0, 0, 0 }
+      gap_start_file    = "light.png"
+      gap_start_border  = { 0, 0, 0, 0 }
+      gap_end_file      = "light.png"
+      gap_end_border    = { 0, 0, 0, 0 }
+	    gap_side          = LEFT
+    }
+    image 
+    {
+      function          = BOX_GAP
+      recolorable       = TRUE
+      file              = "shadow-notebook-right.png"
+      border            = { 5, 5, 5, 5 }
+      stretch           = TRUE
+      gap_file          = "trans.png"
+      gap_border        = { 0, 0, 0, 0 }
+      gap_start_file    = "light.png"
+      gap_start_border  = { 0, 0, 0, 0 }
+      gap_end_file      = "light.png"
+      gap_end_border    = { 0, 0, 0, 0 }
+	    gap_side          = RIGHT
+    }
+  }
+}
+
+style "Baroque-tooltips"  = "Baroque-default"
+{
+  bg[NORMAL] = "#333333"
+
+  engine "pixmap"
+  {
+    image
+    {
+      function          = FLAT_BOX
+      recolorable       = TRUE
+      file              = "tooltip.png"
+      border            = { 1, 1, 1, 1 }
+      stretch           = TRUE
+    }
+  }
+}
+
+style "Baroque-ruler"     = "Baroque-default"
+{
+  engine "pixmap"
+  {
+    image
+    {
+      function          = BOX
+      file              = "ruler.png"
+      border            = { 0, 1, 0, 1 }
+      stretch           = TRUE
+    }
+  }
+}
+
+style "Baroque-layout"    = "Baroque-default"
+{
+  engine "pixmap"
+  {
+    image
+    {
+       function          = SHADOW
+       detail            = "entry"
+       file              = "shadow.png"
+       recolorable       = TRUE
+       border            = { 5, 5, 5, 5 }
+       stretch           = TRUE
+    }
+    image
+    {
+       function          = SHADOW
+       file              = "shadow-evolution.png"
+       recolorable       = TRUE
+       border            = { 1, 1, 1, 1 }
+       stretch           = TRUE
+    }
+    image
+    {
+      function          = BOX
+      detail            = "button"
+      state             = NORMAL
+      file              = "button-out.png"
+      recolorable       = TRUE
+      border            = { 8, 8, 8, 8 }
+      stretch           = TRUE
+    }
+  }
+}
+
+# This prevents Sodipodi from crashing while opening the
+# Object-Style dialog.
+
+style "Baroque-unstyle"
+{
+  engine ""
+  {
+  }
+}
+
+# recognizable pressed toggle buttons
+# SPIcons seem to erase the background first. That's why I can't use
+# the Baroque-button style.
+
+style "Baroque-SPbutton"
+{
+  engine "pixmap"
+  {
+    image
+    {
+      function          = BOX
+      shadow            = IN
+      recolorable       = TRUE
+      file              = "shadow.png"
+      border            = { 5, 5, 5, 5 }
+      stretch           = TRUE
+    }
+    image
+    {
+      function          = BOX
+    }
+  }
+}
+
+style "Baroque-treeview" = "Baroque-default"
+{
+  bg_pixmap[NORMAL] = "entry-normal.png"
+}
+
+style "Baroque-evolution-specific" = "Baroque-default"
+{
+  engine "pixmap"
+  {
+    image
+    {
+       function          = SHADOW
+       file              = "shadow.png"
+       recolorable       = TRUE
+       border            = { 5, 5, 5, 5 }
+       stretch           = TRUE
+    }
+  }
+}
+
+style "Baroque-stock-icons"
+{
+  stock["gtk-add"] = {
+    { "icons/48x48/actions/gtk-add.png" }
+  }
+  stock["gtk-bold"] = {
+    { "icons/48x48/actions/gtk-bold.png" }
+  }
+  stock["gtk-cancel"] = {
+    { "icons/48x48/actions/dialog-cancel.png" }
+  }
+  stock["gtk-cdrom"] = {
+    { "icons/48x48/devices/media-cdrom.png" }
+  }
+  stock["gtk-clear"] = {
+    { "icons/48x48/actions/edit-clear.png" }
+  }
+  stock["gtk-close"] = {
+    { "icons/48x48/actions/gtk-close.png" }
+  }
+  stock["gtk-copy"] = {
+    { "icons/48x48/actions/gtk-copy.png" }
+  }
+  stock["gtk-cut"] = {
+    { "icons/48x48/actions/gtk-cut.png" }
+  }
+  stock["gtk-delete"] = {
+    { "icons/48x48/actions/gtk-delete.png" }
+  }
+  stock["gtk-find"] = {
+    { "icons/48x48/actions/gtk-find.png" }
+  }
+  stock["gtk-find-and-replace"] = {
+    { "icons/48x48/actions/gtk-find-and-replace.png" }
+  }
+  stock["gtk-home"] = {
+    { "icons/48x48/actions/gtk-home.png" }
+  }
+  stock["gtk-remove"] = {
+    { "icons/48x48/actions/gtk-remove.png" }
+  }
+  stock["gtk-go-back"] = {
+    { "icons/48x48/actions/back.png" }
+  }
+  stock["gtk-go-down"] = {
+    { "icons/48x48/actions/gtk-go-down.png" }
+  }
+  stock["gtk-execute"] = {
+    { "icons/48x48/actions/gtk-execute.png" }
+  }
+  stock["gtk-floppy"] = {
+    { "icons/48x48/devices/gtk-floppy.png" }
+  }
+  stock["gtk-go-forward"] = {
+    { "icons/48x48/actions/forward.png" }
+  }
+  stock["gtk-go-up"] = {
+    { "icons/48x48/actions/gtk-go-up.png" }
+  }
+  stock["gtk-goto-bottom"] = {
+    { "icons/48x48/actions/go-bottom.png" }
+  }
+  stock["gtk-goto-first"] = {
+    { "icons/48x48/actions/go-first.png" }
+  }
+  stock["gtk-goto-last"] = {
+    { "icons/48x48/actions/go-last.png" }
+  }
+  stock["gtk-goto-top"] = {
+    { "icons/48x48/actions/go-top.png" }
+  }
+  stock["gtk-help"] = {
+    { "icons/48x48/actions/gtk-help.png" }
+  }
+  stock["gtk-italic"] = {
+    { "icons/48x48/actions/gtk-italic.png" }
+  }
+  stock["gtk-jump-to"] = {
+    { "icons/48x48/actions/go-jump.png" }
+  }
+  stock["gtk-justify-center"] = {
+    { "icons/48x48/actions/gtk-justify-center.png" }
+  }
+  stock["gtk-justify-fill"] = {
+    { "icons/48x48/actions/gtk-justify-fill.png" }
+  }
+  stock["gtk-justify-left"] = {
+    { "icons/48x48/actions/gtk-justify-left.png" }
+  }
+  stock["gtk-justify-right"] = {
+    { "icons/48x48/actions/gtk-justify-right.png" }
+  }
+  stock["gtk-missing-image"] = {
+    { "icons/16x16/stock/gtk-missing-image.png", *, *, "gtk-menu" },
+    { "icons/48x48/stock/gtk-missing-image.png" }
+  }
+  stock["gtk-new"] = {
+    { "icons/16x16/actions/gtk-new.png", *, *, "gtk-menu" },
+    { "icons/48x48/actions/gtk-new.png" }
+  }
+  stock["gtk-no"] = {
+    { "icons/48x48/actions/gtk-no.png" }
+  }
+  stock["gtk-open"] = {
+    { "icons/16x16/actions/gtk-open.png", *, *, "gtk-menu" },
+    { "icons/48x48/actions/gtk-open.png" }
+  }
+  stock["gtk-ok"] = {
+    { "icons/48x48/actions/gtk-ok.png" }
+  }
+  stock["gtk-paste"] = {
+    { "icons/48x48/actions/gtk-paste.png" }
+  }
+  stock["gtk-preferences"] = {
+    { "icons/48x48/categories/gtk-preferences.png" }
+  }
+  stock["gtk-print"] = {
+    { "icons/48x48/actions/gtk-print.png" }
+  }
+  stock["gtk-print-preview"] = {
+    { "icons/16x16/actions/gtk-print-preview.png", *, *, "gtk-menu" },
+    { "icons/48x48/actions/gtk-print-preview.png" }
+  }
+  stock["gtk-properties"] = {
+    { "icons/16x16/actions/gtk-properties.png", *, *, "gtk-menu" },
+    { "icons/48x48/actions/gtk-properties.png" }
+  }
+  stock["gtk-quit"] = {
+    { "icons/48x48/actions/gtk-quit.png" }
+  }
+  stock["gtk-redo"] = {
+    { "icons/48x48/actions/edit-redo.png" }
+  }
+  stock["gtk-refresh"] = {
+    { "icons/48x48/actions/gtk-refresh.png" }
+  }
+  stock["gtk-revert-to-saved"] = {
+    { "icons/16x16/actions/revert.png", *, *, "gtk-menu" },
+    { "icons/48x48/actions/revert.png" }
+  }
+  stock["gtk-save"] = {
+    { "icons/48x48/actions/gtk-save.png" }
+  }
+  stock["gtk-save-as"] = {
+    { "icons/16x16/actions/gtk-save-as.png", *, *, "gtk-menu" },
+    { "icons/48x48/actions/gtk-save-as.png" }
+  }
+  stock["gtk-select-font"] = {
+    { "icons/48x48/applications/preferences-desktop-font.png" }
+  }
+  stock["gtk-spell-check"] = {
+    { "icons/48x48/actions/gtk-spell-check.png" }
+  }
+  stock["gtk-strikethrough"] = {
+    { "icons/48x48/actions/gtk-strikethrough.png" }
+  }
+  stock["gtk-sort-ascending"] = {
+    { "icons/48x48/actions/gtk-sort-ascending.png" }
+  }
+  stock["gtk-sort-descending"] = {
+    { "icons/48x48/actions/gtk-sort-descending.png" }
+  }
+  stock["gtk-stop"] = {
+    { "icons/16x16/actions/gtk-stop.png", *, *, "gtk-menu" },
+    { "icons/48x48/actions/gtk-stop.png" }
+  }
+  stock["gtk-underline"] = {
+    { "icons/48x48/actions/gtk-underline.png" }
+  }
+  stock["gtk-undo"] = {
+    { "icons/48x48/actions/edit-undo.png" }
+  }
+  stock["gtk-yes"] = {
+    { "icons/48x48/stock/gtk-yes.png" }
+  }
+} class "GtkObject" style "Baroque-stock-icons"
+
+class "GtkWidget"          style "Baroque-default"
+class "GtkEventBox"        style "Baroque-default"
+class "GtkButton"          style "Baroque-button"
+class "GtkRadioButton"     style "Baroque-radiobutton"
+class "GtkCheckButton"     style "Baroque-checkbutton"
+class "GtkOptionMenu"      style "Baroque-optionmenu"
+class "GtkEntry"           style "Baroque-entry"
+class "GtkOldEditable"     style "Baroque-entry"
+class "GtkSpinButton"      style "Baroque-spinbutton"
+class "GtkRange"           style "Baroque-range"
+class "GtkScrollbar"       style "Baroque-scrollbar"
+class "GtkProgressBar"     style "Baroque-progressbar"
+class "GtkMenu"            style "Baroque-menu"
+class "GtkItem"            style "Baroque-menuitem"
+class "GtkNotebook"        style "Baroque-notebook"
+class "GtkRuler"           style "Baroque-ruler"
+class "GtkLayout"          style "Baroque-layout"
+class "GtkTreeView"        style "Baroque-treeview"
+class "GtkStatusbar"       style "Baroque-statusbar"
+widget "gtk-tooltips"      style "Baroque-tooltips"
+# Sodipodi 0.31
+class "SPButton"           style "Baroque-SPbutton"
+class "SPColorSlider"      style "Baroque-unstyle"
+# Evolution 1.4.4
+class "ECalendar"          style "Baroque-evolution-specific"

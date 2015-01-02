@@ -1,0 +1,4 @@
+#define close_hover_width 8
+#define close_hover_height 8
+static unsigned char close_hover_bits[] = {
+   0x3c, 0x18, 0x99, 0xff, 0xff, 0x99, 0x18, 0x3c};

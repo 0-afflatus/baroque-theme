@@ -1,0 +1,127 @@
+/***************
+ Baroque Gtk+ 
+ theme images
+***************/
+
+.background {
+	background-image: url("img/bg.png");
+}
+
+.menubar {
+	background-image: url("img/bg.png");
+}
+
+.toolbar {
+	background-image: url("img/bg.png");
+}
+
+.primary-toolbar {
+	background-image: url("img/bg.png");
+}
+
+.pane-separator.vertical {
+	background-image: url("img/hhandle.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.pane-separator.horizontal {
+	background-image: url("img/vhandle.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.pane-separator.vertical:hover {
+	background-image: url("img/hhandle-pre.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.pane-separator.horizontal:hover {
+	background-image: url("img/vhandle-pre.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+GtkStatusbar {
+	background-image: url("img/bg.png");
+}
+
+.menu {
+	background-image: url("img/bg.png");
+}
+
+.check {
+    background-image: url("img/check-n.png");
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+.check:hover {
+    background-image: url("img/check-n.png");
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+.check:active {
+    background-image: url("img/check-s.png");
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+.check:active:hover {
+    background-image: url("img/check-s.png");
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+.radio {
+	background-image: url("img/radio-n.png");
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+.radio:hover {
+	background-image: url("img/radio-n.png");
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+.radio:active {
+    background-image: url("img/radio-s.png");
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+.radio:active:hover {
+    background-image: url("img/radio-s.png");
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+.grip {
+	background-image: url("img/grip.png");
+    background-repeat: no-repeat;
+}
+
+.notebook {
+	background-image: url("img/bg.png");
+}
+
+PanelWidget,
+PanelToplevel *,
+PanelApplet,
+PanelApplet > GtkMenuBar.menubar,
+PanelApplet > GtkMenuBar.menubar *,
+.gnome-panel-menu-bar,
+PanelMenuBar.menubar,
+PanelToplevel {
+	background-image: url("img/bg.png");
+}
+
+PanelAppletFrame { 
+	background-image: url("img/vhandle.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
