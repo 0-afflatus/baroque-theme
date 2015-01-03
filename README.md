@@ -22,8 +22,11 @@ Issues relating to DFSG compliance are welcomed.
 
 * Click the Download ZIP link at the bottom of the right-hand column -->
 * You can either drag the .zip file into the settings > appearance window
+
 OR
+
 * Extract the .zip file into ~/.themes/ in your home folder
+
 Either should work.
 
 # Screenshots
